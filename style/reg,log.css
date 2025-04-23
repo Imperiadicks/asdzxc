@@ -1,0 +1,188 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+}
+
+.page-wrapper {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Хедер */
+.site-header {
+    background-color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Навигация */
+.site-navigation .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.site-navigation .nav-item {
+    margin-left: 2rem;
+}
+
+.site-navigation .nav-link {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.site-navigation .nav-link:hover {
+    color: #007bff;
+}
+
+/* Действия в хедере (поиск, корзина, пользователь) */
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-actions .action-link {
+    margin-left: 1.5rem;
+    color: #777;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.header-actions .action-link:hover {
+    color: #333;
+}
+
+.header-actions .user-button {
+    display: flex;
+    align-items: center;
+}
+
+.header-actions .user-button .buttonmenuuser{
+    margin-left: 0.5rem;
+    font-weight: 500;
+}
+
+/* Секции входа и регистрации */
+.login-section, .register-section {
+    padding: 4rem 0;
+    background-color: #f5f5f5;
+}
+
+.login-section .container, .register-section .container {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-section h2, .register-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #222;
+}
+
+/* Формы входа и регистрации */
+.login-form .form-group, .register-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.login-form label, .register-form label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+    box-sizing: border-box;
+}
+
+.login-form button[type="submit"], .register-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-form button[type="submit"]:hover, .register-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.login-form p, .register-form p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.login-form p a, .register-form p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Styles for error messages */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+/* Футер */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.site-footer .container {
+    max-width: 960px;
+}
+
+.site-footer p {
+    font-size: 0.9rem;
+}

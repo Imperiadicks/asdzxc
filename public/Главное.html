@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="../style/Главное.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+</head>
+<body>
+<div class="page-wrapper">
+    <header class="site-header">
+        <div class="container">
+            <a href="Главное.html" class="logo">
+                <img src="" alt="АвтоМир">
+            </a>
+            <nav class="site-navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Контакты</a></li>
+                    <li class="nav-item" id="login-link-li"><a href="login.html" class="nav-link" id="login-link">Войти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-image">
+                <img src="" alt="Героическое изображение">
+            </div>
+            <div class="hero-content">
+                <h1>Исследуйте мир автомобилей</h1>
+                <p>Найдите уникальные и качественные автомобили, которые подчеркнут ваш стиль и индивидуальность.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-categories">
+        <div class="container">
+            <h2>Категории автомобилей</h2>
+            <div class="content-featured-image">
+                <img src="" alt="Изображение категории" class="featured-image">
+            </div>
+            <div class="category-wrapper">
+                <ol class="category-grid">
+                    <li class="category-item active" data-category="sedan">
+                        <span class="category-title">Седаны</span>
+                        <span class="category-description">Комфорт и стиль для городских поездок.</span>
+                         <div class="category-timer"></div>
+                    </li>
+    
+                    <li class="category-item" data-category="suv">
+                        <span class="category-title">Внедорожники</span>
+                        <span class="category-description">Мощь и проходимость для любых дорог.</span>
+                         <div class="category-timer"></div>
+                    </li>
+    
+                    <li class="category-item" data-category="sportcar">
+                        <span class="category-title">Спорткары</span>
+                        <span class="category-description">Скорость и адреналин на трассе и в городе.</span>
+                         <div class="category-timer"></div>
+                    </li>
+    
+                    <li class="category-item" data-category="truck">
+                        <span class="category-title">Пикапы</span>
+                        <span class="category-description">Надежность и функциональность для работы и отдыха.</span>
+                         <div class="category-timer"></div>
+                    </li>
+    
+                </ol>
+            </div>
+
+             <div class="featured-description-wrapper">
+                <p id="featured-description">Выберите категорию, чтобы увидеть описание.</p>
+                 <a href="/shop" class="category-link">Подробнее</a>
+                <!-- Кнопка подробнее -->
+             </div>
+        </div>
+    </section>
+
+    <section class="new-arrivals">
+        <div class="container">
+            <h2>Новинки</h2>
+            <div class="splide" id="new-arrivals-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="product-card">
+                                <img src="" alt="Товар 1">
+                                <h3>[Название Товара 1]</h3>
+                                <p class="price">$99.99</p>
+                                <a href="#" class="button">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="product-card">
+                                <img src="" alt="Товар 2">
+                                <h3>[Название Товара 2]</h3>
+                                <p class="price">$129.99</p>
+                                <a href="#" class="button">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="product-card">
+                                <img src="" alt="Товар 3">
+                                <h3>[Название Товара 3]</h3>
+                                <p class="price">$79.99</p>
+                                <a href="#" class="button">Подробнее</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us">
+        <div class="container">
+            <div class="about-content">
+                <h2>О нас</h2>
+                <p>Мы - команда энтузиастов, стремящихся предложить вам только лучшие [Тип Товаров].  Мы верим, что каждый заслуживает качественные продукты, которые приносят радость и удовлетворение.</p>
+                <p>Наша миссия - сделать процесс покупки максимально удобным и приятным.  Мы постоянно работаем над улучшением нашего сервиса и расширением ассортимента.</p>
+                <a href="#" class="button">Узнать больше <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="about-image">
+                <img src="" alt="Современное изображение 'О нас'">
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2023 АвтоМир. Все права защищены.</p>
+        </div>
+    </footer>
+
+        <div id="account-modal" class="account-modal">
+        <div class="account-modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Ваш Аккаунт</h2>
+            <div class="profile-info">
+                <img src="" alt="Ваш аватар" class="modal-avatar">
+                <h3>[Имя Пользователя]</h3>
+                <p>[Email Пользователя]</p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Редактировать Профиль</a></li>
+                    <li><a href="#">Настройки</a></li>
+                    <li><a href="#">История Заказов</a></li>
+                     <li class="nav-item" id="logout-link-li" style="display:none"><a href="#" class="nav-link" id="logoutLink">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="../scripts/Главное.js"></script>
+</body>
+</html>

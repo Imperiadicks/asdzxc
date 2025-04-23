@@ -1,0 +1,443 @@
+/* Корзина.css */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+.cart-page-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 90vh;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Main Container Styles */
+.cart-container {
+    width: 60%;
+    padding: 40px;
+    border-right: 1px solid #eee;
+}
+
+.cart-summary {
+    width: 40%;
+    padding: 40px;
+    background-color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Header Styles */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.cart-header h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+}
+
+.cart-items-count {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Button Styles (Modern Look) */
+.back-to-shop-btn,
+.apply-promo-btn,
+.remove-selected-btn,
+.checkout-button,
+#confirm-btn,
+#cancel-btn {
+    border: none;
+    padding: 14px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+
+.back-to-shop-btn {
+    background-color: transparent;
+    color: #555;
+    border: 2px solid #ccc;
+}
+
+.back-to-shop-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+/* Cart Controls Styles */
+.cart-controls {
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Custom Checkbox Styles */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.custom-checkbox input {
+    display: none;
+}
+
+.checkmark {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-checkbox input:checked + .checkmark {
+    background-color: #64b5f6; /* Blue color */
+    border-color: #64b5f6;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    top: 1px;
+    left: 6px;
+}
+
+.remove-selected-btn {
+    background-color: transparent;
+    color: #e57373; /* Light Red color */
+    border: 2px solid #e57373;
+    margin-left: auto; /* Push to the right */
+}
+
+.remove-selected-btn:hover {
+    background-color: #ffebee;
+    transform: translateY(-3px);
+}
+
+/* List Styles */
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Cart Item Elements */
+.cart-item .item-checkbox {
+    margin-right: 15px;
+}
+
+.cart-item .item-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cart-item .item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item .item-details {
+    flex: 1;
+}
+
+.cart-item .item-name {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.cart-item .item-description {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.cart-item .item-price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: auto;
+    color: #333;
+}
+
+.cart-item .item-quantity {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.cart-item .item-quantity button {
+    background-color: #f0f0f0;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-item .item-quantity button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-3px);
+}
+
+.cart-item .item-quantity input {
+    width: 50px;
+    text-align: center;
+    margin: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.cart-item .item-remove {
+    color: #e57373;
+    margin-left: 25px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.cart-item .item-remove:hover {
+    color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+/* Summary Styles */
+.promo-code {
+    margin-bottom: 30px;
+}
+
+.promo-code label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.promo-code-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.promo-code input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    margin-right: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.promo-code input[type="text"]:focus {
+    outline: none;
+    border-color: #90caf9;
+}
+
+.apply-promo-btn {
+    background-color: #90caf9; /* Light blue color */
+    color: #fff;
+}
+
+.apply-promo-btn:hover {
+    background-color: #64b5f6;
+    transform: translateY(-3px);
+}
+
+.cart-total {
+    margin-bottom: 30px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.total-row.discount {
+    color: #4caf50; /* Light Green for Discounts */
+    font-weight: 500;
+}
+
+.total-row.total-price {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Promotions Styles */
+.promotions {
+    margin-top: 30px;
+    border-top: 2px solid #eee;
+    padding-top: 30px;
+}
+
+.promotions h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.promotion {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.promotion:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-3px);
+}
+
+.promotion img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.promotion .promo-details {
+    font-size: 0.9rem;
+    color: #777;
+    margin-left: auto;
+}
+
+.checkout-button {
+    background-color: #7cb342;  /* A green */
+    color: #fff;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #689f38;
+    transform: translateY(-3px);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+#confirm-btn, #cancel-btn {
+    background-color: #7cb342;  /* A soft green color */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#confirm-btn:hover, #cancel-btn:hover {
+  background-color: #689f38;
+  transform: translateY(-2px);
+}

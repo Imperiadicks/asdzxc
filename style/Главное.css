@@ -1,0 +1,645 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #000;
+    color: #fff;
+    line-height: 1.7;
+}
+
+.page-wrapper {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Хедер */
+.site-header {
+    background-color: #111;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 100;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* Навигация */
+.site-navigation .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.site-navigation .nav-item {
+    margin-left: 2.5rem;
+}
+
+.site-navigation .nav-link {
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.site-navigation .nav-link:hover {
+    color: #00ff00;
+}
+
+/* Стили для account-button */
+#account-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Стили для user-avatar */
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Героический раздел */
+.hero-section {
+    background-color: #111;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section .hero-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .hero-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    color: #aaa;
+    margin-bottom: 3rem;
+}
+
+.hero-section .button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.hero-section .button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Популярные категории */
+.featured-categories {
+    margin-top: 50px;
+}
+
+.featured-categories h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #999;
+}
+
+.category-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s;
+    flex: 1 1 150px;
+    margin: 0.5rem;
+}
+
+.category-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #555;
+    transition: background-color 0.3s;
+}
+
+.category-item:hover::before {
+    background-color: #00ff00;
+}
+
+.category-item.active::before {
+    background-color: #00ff00;
+}
+
+.category-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.category-description {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Стили для .content-featured-image */
+.content-featured-image {
+    display: flex;
+    width: 100%;
+    height: 65vh;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+/* Стили для featured-image */
+.content-featured-image .featured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Стили для текста поверх изображения */
+.content-featured-image .featured-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для текста */
+    color: #aaa; /*  Текст теперь серый */
+}
+
+.content-featured-image .featured-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Тень для лучшей видимости */
+}
+
+.content-featured-image .category-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Тень для лучшей видимости */
+}
+
+.content-featured-image .featured-text p {
+  font-size: 1rem;
+    color: #aaa; /*  Текст теперь серый */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Тень для лучшей видимости */
+}
+
+.featured-description-wrapper {
+    text-align: center;
+    color: #aaa;
+    margin-top: 10px; /* Отступ от списка категорий */
+}
+
+.featured-description-wrapper p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.featured-description-wrapper .category-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.featured-description-wrapper .category-link:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для таймера категории */
+.category-timer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Толщина полоски */
+    background-color: rgba(0, 255, 0, 0.5); /* Полупрозрачный зеленый цвет */
+    transform-origin: left;
+    transform: scaleX(0); /* Изначально скрыта */
+    transition: transform 10s linear; /* Анимация на 10 секунд */
+}
+
+.category-item.active .category-timer {
+    transform: scaleX(1); /* Показываем таймер */
+}
+
+/* Новинки */
+.new-arrivals {
+    padding: 6rem 0;
+    background-color: #111;
+}
+
+.new-arrivals h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.new-arrivals .splide__slide {
+    padding: 0 1.2rem;
+}
+
+.new-arrivals .product-card {
+    background-color: #222;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.new-arrivals .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.new-arrivals .product-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.new-arrivals .product-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 1.2rem;
+    color: #fff;
+}
+
+.new-arrivals .product-card .price {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin: 0 1.2rem 1.2rem;
+}
+
+.new-arrivals .product-card .button {
+    display: block;
+    text-align: center;
+    padding: 1.2rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.new-arrivals .product-card .button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* О нас */
+.about-us {
+    padding: 6rem 0;
+    background-color: #111;
+}
+
+.about-us .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-us .about-content {
+    width: 50%;
+    padding-right: 3rem;
+}
+
+.about-us h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.about-us .button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.about-us .button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.about-us .about-image {
+    width: 50%;
+}
+
+.about-us .about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Футер */
+.site-footer {
+    background-color: #222;
+    color: #aaa;
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-section .container,
+    .about-us .container {
+        flex-direction: column;
+    }
+
+    .hero-section .hero-image,
+    .hero-section .hero-content,
+    .about-us .about-content,
+    .about-us .about-image {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .site-navigation .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-navigation .nav-item {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ==========================================================================
+   Стили для аккаунта
+   ========================================================================== */
+
+/* Стили для Account wrapper */
+.account-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+/* Стили для модального окна */
+.account-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Стили для содержимого модального окна */
+.account-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Стили для кнопки закрытия */
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Стили для информации профиля */
+.profile-info {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+/* Стили для modal-avatar */
+.profile-info .modal-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Стили для навигации */
+.account-modal-content nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.account-modal-content nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.account-modal-content nav ul li a:hover {
+    background-color: #3f3f3f;
+}
+
+/* Стили для слайдера Splide.js */
+.splide__slide {
+    opacity: 0.7; /* Полупрозрачность для остальных слайдов */
+    transition: opacity 0.3s ease; /* Плавный переход при наведении */
+}
+
+.splide__slide.is-active {
+    opacity: 1; /* Полная видимость для активного слайда */
+}
+
+/* Настройка навигационных элементов (стрелок) */
+.splide__arrow {
+    background: rgba(0, 0, 0, 0.5); /* Затемненный фон для стрелок */
+    border-radius: 50%; /* Круглые стрелки */
+    color: white; /* Белый цвет для значков стрелок */
+    width: 3em; /* Ширина стрелок */
+    height: 3em; /* Высота стрелок */
+    opacity: 0.7; /* Полупрозрачность */
+    transition: opacity 0.3s ease; /* Плавное появление/исчезновение */
+}
+
+.splide__arrow:hover {
+    opacity: 1; /* При наведении стрелки становятся полностью видимыми */
+}
+
+.splide__arrow svg {
+    width: 1.5em; /* Размер значка стрелки */
+    height: 1.5em;
+}
+
+.splide__pagination {
+    bottom: 0.5em; /* Расположение точек пагинации */
+}
+
+.splide__pagination__page {
+    background: rgba(0, 0, 0, 0.3); /* Затемненные точки */
+    border: none; /* Убираем обводку */
+    border-radius: 50%; /* Круглые точки */
+    width: 0.7em; /* Размер точек */
+    height: 0.7em; /* Высота точек */
+    opacity: 0.7; /* Полупрозрачность */
+    transition: opacity 0.3s ease; /* Плавное появление/исчезновение */
+}
+
+.splide__pagination__page.is-active {
+    background: rgba(0, 0, 0, 0.8); /* Активная точка становится более яркой */
+    opacity: 1;
+}
+
+/* Стили для модального окна */
+.account-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Стили для содержимого модального окна */
+.account-modal-content {
+    background-color: #555555;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Стили для .category-grid (ol) */
+.category-grid {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Делаем ol контейнером Flexbox */
+    flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
+    justify-content: space-around; /* Распределяем элементы равномерно */
+}
+
+.category-item {
+    width: 48%; /*  Приблизительно 50% с учетом отступов */
+}
+
